@@ -25,18 +25,17 @@ An intelligent database assistant that bridges the gap between natural language 
 - Python 3.10+
 - OpenAI API Key
 
-## Installation
+### Installation
 Install the required dependencies:
 ```bash
 pip install mcp openai anyio
 ```
-
 Set your OpenAI API Key as an environment variable:
 ```bash
 export OPENAI_API_KEY='your-key-here'
 ```
 
-## Running the Agent
+### Running the Agent
 Simply run the runner script:
 ```bash
 python runner.py
