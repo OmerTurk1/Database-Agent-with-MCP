@@ -17,7 +17,7 @@ An intelligent database assistant that bridges the gap between natural language 
 ## 🏗️ Project Structure
 - runner.py: The main entry point. It manages the MCP client session and the LLM communication loop.
 - server.py: The MCP Server that exposes database tools to the LLM via the FastMCP framework.
-- tools.py: Contains the core Python logic for SQLite interactions (Connect, Show, Info, Execute).
+- /workspace: The sandbox of MCP Agent. It can only have an effect on this area.
 - client.py: A wrapper for the OpenAI API to handle chat completions.
 
 ## 🚀 Getting Started
