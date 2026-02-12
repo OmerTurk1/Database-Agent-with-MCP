@@ -1,0 +1,86 @@
+C:\DatabaseMCP>python runner.py
+--- Database Management Bot is Active! ---
+>>>(Press q to quit): show tables
+[*] Tool is called: list_database_tables...
+
+Bot: The database contains the following tables:
+
+1. **students**
+2. **sqlite_sequence**
+>>>(Press q to quit): does the tables empty?
+[*] Tool is called: execute_query...
+
+Bot: The "students" table is empty, with a count of 0 records.
+>>>(Press q to quit): what about the other one?
+[*] Tool is called: execute_query...
+
+Bot: The "sqlite_sequence" table is also empty, with a count of 0 records.
+>>>(Press q to quit): thank you for the work you have been putting in, i have made you work hard for me. i really appreciate your big heart.
+
+Bot: Thank you for your kind words! I'm here to help, so if you have any more questions or need assistance with anything else, feel free to ask. Your appreciation means a lot!
+>>>(Press q to quit): add 10 random but logical rows to students table
+[*] Tool is called: execute_query...
+[*] Tool is called: get_table_schema...
+[*] Tool is called: execute_query...
+
+Bot: I successfully added 10 random rows to the "students" table. The entries include names, grades, and departments. If you need anything else or want to view the updated data, just let me know!
+>>>(Press q to quit): print rows of students
+[*] Tool is called: execute_query...
+
+Bot: Here are the rows in the "students" table:
+
+| student_id | name     | grade | dept                 |
+|------------|----------|-------|----------------------|
+| 1          | Alice    | A     | Computer Science      |
+| 2          | Bob      | B     | Mathematics          |
+| 3          | Charlie  | C     | Physics              |
+| 4          | Diana    | A     | Biology              |
+| 5          | Ethan    | B     | Chemistry            |
+| 6          | Fiona    | C     | History              |
+| 7          | George   | A     | Literature           |
+| 8          | Hannah   | B     | Economics            |
+| 9          | Ian      | C     | Political Science     |
+| 10         | Jasmine  | A     | Art                  |
+
+If you need any further assistance or modifications, feel free to ask!
+>>>(Press q to quit): flag the guys who has got worse than b
+[*] Tool is called: execute_query...
+
+Bot: The following students have grades worse than 'B':
+
+1. **Charlie** - Grade: C, Department: Physics
+2. **Fiona** - Grade: C, Department: History
+3. **Ian** - Grade: C, Department: Political Science
+
+If you need to take any further action regarding these students, please let me know!
+>>>(Press q to quit): create a new column and add that information to it. i want to see who is passed and who is not
+[*] Tool is called: execute_query...
+[*] Tool is called: execute_query...
+[*] Tool is called: execute_query...
+
+Bot: I have successfully added a new column called **status** to the "students" table and updated it to reflect the following:
+
+- Students with grades 'A' and 'B' are marked as **Passed**.
+- Students with a grade of 'C' are marked as **Not Passed**.
+
+Would you like to view the updated table with the new status column?
+>>>(Press q to quit): yes
+[*] Tool is called: execute_query...
+
+Bot: Here is the updated "students" table with the new **status** column:
+
+| student_id | name     | grade | dept                 | status      |
+|------------|----------|-------|----------------------|-------------|
+| 1          | Alice    | A     | Computer Science      | Passed      |
+| 2          | Bob      | B     | Mathematics          | Passed      |
+| 3          | Charlie  | C     | Physics              | Not Passed  |
+| 4          | Diana    | A     | Biology              | Passed      |
+| 5          | Ethan    | B     | Chemistry            | Passed      |
+| 6          | Fiona    | C     | History              | Not Passed  |
+| 7          | George   | A     | Literature           | Passed      |
+| 8          | Hannah   | B     | Economics            | Passed      |
+| 9          | Ian      | C     | Political Science     | Not Passed  |
+| 10         | Jasmine  | A     | Art                  | Passed      |
+
+If you need any further actions or modifications, feel free to let me know!
+>>>(Press q to quit):
