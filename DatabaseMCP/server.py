@@ -2,6 +2,8 @@ from mcp.server.fastmcp import FastMCP
 import sqlite3
 import os
 import matplotlib.pyplot as plt
+import pandas as pd
+import yfinance
 
 BASE_DIR = "./workspace"
 mcp = FastMCP("Database Manager")
@@ -148,6 +150,34 @@ def rename_file(oldname: str, newname: str):
     }
 
 @mcp.tool()
+def request_stock_data(
+    stock_name: str, 
+    period: str = "1mo", 
+    interval: str = "1d"
+):
+    """
+    Returns the dataframe from yahoo finance for the desired stock name.
+    Make sure the stock name ends with '.IS'.
+    """
+    try:
+        ticker = yfinance.Ticker(stock_name)
+        df = ticker.history(period=period, interval=interval)
+        if df.empty:
+            return {
+                "status": "error",
+                "message": f"Could not find the data for '{stock_name}'. Make sure to decide the parameters correctly."
+            }
+        return {
+            "status": "ok",
+            "message": df
+        }
+    except Exception as e:
+        return {
+            "status": "error",
+            "message": f"Error occured: {e}"
+        }
+
+@mcp.tool()
 def plot_data(
     x_values: list,
     y_values: list,
@@ -176,6 +206,4 @@ def plot_data(
     plt.show()
 
 if __name__ == "__main__":
-    print("Server Started Manually!")
     mcp.run()
-    print("Server Closed Manually!")

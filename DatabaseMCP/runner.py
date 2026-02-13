@@ -38,7 +38,7 @@ async def run_bot():
 
             while True:
                 # Take the input in asencron loop
-                user_input = await asyncio.to_thread(input, ">>>(Press q to quit): ")
+                user_input = await asyncio.to_thread(input, "\n>>>(Press q to quit): ")
                 if user_input.lower()=="q": break
                 
                 messages.append({"role": "user", "content": user_input})
